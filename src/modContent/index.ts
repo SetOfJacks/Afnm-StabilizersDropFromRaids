@@ -1,31 +1,23 @@
-import { TreasureItem, Technique } from 'afnm-types';
+// import { initializeTeaItems } from './items/teaItems';
 
-import icon from '../assets/image.png';
+function initializeMod() {
+  console.log('🍵 Initializing Stabilizers Drop from Raids Mod...');
 
-const myTreasure: TreasureItem = {
-  kind: 'treasure',
-  name: 'The Best Treasure',
-  description: 'Wooo mod content.',
-  icon: icon,
-  stacks: 1,
-  rarity: 'mundane',
-  realm: 'coreFormation',
-};
-window.modAPI.actions.addItem(myTreasure);
+  const fallenStars = window.modAPI.gameData.fallenStars;
+  console.log(" Adding Pillar Stabilizer and Soul Reinforcer to all " + fallenStars.length + " fallen stars present in the game");
 
-const myTechnique: Technique = {
-  name: 'Test technique',
-  icon: '',
-  type: 'fist',
-  effects: [
-    {
-      kind: 'buffSelf',
-      buff: window.modAPI.gameData.techniqueBuffs.fist.flow,
-      amount: {
-        value: 1,
-        stat: undefined,
-      },
-    },
-  ],
-};
-window.modAPI.actions.addTechnique(myTechnique);
+  fallenStars.forEach(fallenStar => {
+    fallenStar.rewardPool.push({ name: 'Pillar Stabilizer' });
+    fallenStar.rewardPool.push({ name: 'Soul Reinforcer' });
+  });
+
+
+  console.log(" Final modified fallen stars list  ")
+  console.log( window.modAPI.gameData.fallenStars);
+
+  console.log('✅ Mod loaded successfully!');
+
+
+}
+
+initializeMod();

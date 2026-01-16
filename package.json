@@ -1,9 +1,9 @@
 {
-  "name": "my-afnm-mod",
+  "name": "afnm-stabilizers-drop-from-raids",
   "version": "0.0.1",
-  "description": "A mod for AFNM",
+  "description": "A mod for AFNM that makes pillar stabilization items drop from high rank raids",
   "author": {
-    "name": "<your name>"
+    "name": "SetOfJacks"
   },
   "main": "dist/mod.js",
   "scripts": {
