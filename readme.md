@@ -1,32 +1,15 @@
-# AFNM Mod Guide
+# AFNM Mod - Stabilizers Drop From Raids
 
 ## Quick Overview
 
-This project provides a complete framework for creating mods for **Ascend From Nine Mountains**. You can find the game [here](https://store.steampowered.com/app/3992260/Ascend_From_Nine_Mountains/).
+A barebones AFNM mod to add pillar stabilization items as valid drops to Fallen Star raids.
 
-## Documentation
+## Why?
 
-For comprehensive guides on modding AFNM, visit our **[complete documentation site](https://lyeeedar.github.io/AfnmExampleMod/)**:
+It is absurd that raiding Fallen Stars can make you functionally immortal and give you infinite rare pillar components to sell for cash, but the only way to get Pillar stabilization componenets is to gamble on uncut jade once a month and pray to RNGesus. 
 
-### Step-by-Step Guides
+## Specifics
 
-- **[Project Setup](https://lyeeedar.github.io/AfnmExampleMod/guides/project-setup.html)** - Environment setup and first steps
-- **[Mod Development](https://lyeeedar.github.io/AfnmExampleMod/guides/mod-development)** - Using the ModAPI and building content
-- **[Packaging & Testing](https://lyeeedar.github.io/AfnmExampleMod/guides/packaging-testing)** - Building and testing your mod
-- **[Publishing](https://lyeeedar.github.io/AfnmExampleMod/guides/publishing)** - Releasing to Steam Workshop
-- **[Your First Mod](https://lyeeedar.github.io/AfnmExampleMod/guides/first-mod)** - Full guide putting the above steps together to make a mod
+This mod adds Pillar Stabilizers and Soul Reinforcers to the reward pool for all existing and future Fallen Star raid events. The reward distribution logic is not modified, so higher tier Raids still result in more total items and more opportunities to get specific components. 
 
-### Core Concepts
-
-- **[Flags System](https://lyeeedar.github.io/AfnmExampleMod/concepts/flags)** - State management and tracking
-- **[Scaling System](https://lyeeedar.github.io/AfnmExampleMod/concepts/scaling)** - Dynamic value calculations
-- **[ModAPI](https://lyeeedar.github.io/AfnmExampleMod/concepts/modapi)** - Overview of the modding API
-
-## Quick Start
-
-1. **Clone/fork** this repository
-2. **Install dependencies**: `npm install`
-3. **Edit** `package.json` with your mod details
-4. **Start coding** in `src/modContent/index.ts`
-5. **Build your mod**: `npm run build`
-6. **Test** by placing the zip in the game's `mods/` folder
+Life Foundations have not been added and remain a crafting-only option.
